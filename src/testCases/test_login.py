@@ -16,7 +16,7 @@ class Test_01_Login:
             assert True
             self.driver.close()
         else:
-            self.driver.save_screenshort(".\\ScreenShots\\"+"test_homePagetitle.png")
+            self.driver.save_screenshot("..\\ScreenShots\\"+"test_homePagetitle.png")
             self.driver.close()
             assert False
             
@@ -33,6 +33,6 @@ class Test_01_Login:
             assert True
             self.driver.close()
         else:
-            self.driver.save_screenshort(".\\ScreenShots\\"+"test_login.png")
+            self.driver.save_screenshot("..\\ScreenShots\\"+"test_login.png")
             self.driver.close()
             assert False
