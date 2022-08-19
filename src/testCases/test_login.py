@@ -12,10 +12,12 @@ class Test_01_Login:
         self.driver=setup
         self.driver.get(self.baseURL)
         actual_title=self.driver.title
-        self.driver.close()
         if actual_title == "Lori Field App":
             assert True
+            self.driver.close()
         else:
+            self.driver.save_screenshort(".\\ScreenShots\\"+"test_homePagetitle.png")
+            self.driver.close()
             assert False
             
     
@@ -27,8 +29,10 @@ class Test_01_Login:
         self.login.setPassword(self.password)
         self.login.click_login()
         page_title =self.driver.title
-        self.driver.close()
         if page_title == "Lori Field App":
             assert True
+            self.driver.close()
         else:
+            self.driver.save_screenshort(".\\ScreenShots\\"+"test_login.png")
+            self.driver.close()
             assert False
